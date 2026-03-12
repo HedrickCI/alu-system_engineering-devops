@@ -1,0 +1,5 @@
+Host alu-server
+    HostName 3.94.107.50
+    User ubuntu
+    IdentityFile /home/ubuntu/alu-system_engineering-devops/ssh/school
+    PasswordAuthentication no
