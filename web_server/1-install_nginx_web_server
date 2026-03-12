@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Installs and configures Nginx on a server
+
+# Update package list and install nginx
+apt-get update
+apt-get -y install nginx
+
+# Create a custom index file
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+
+# Ensure Nginx is running and starts on boot
+service nginx star
