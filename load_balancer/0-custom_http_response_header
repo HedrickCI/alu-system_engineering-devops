@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Configures Nginx with a custom X-Served-By HTTP response header
+
+export DEBIAN_FRONTEND=noninteractive
+
+apt-get update -y
+apt-get install -y nginx
+
+sed -i '/server_name _;/a\\tadd_header X-Served-By $hostname;' /etc/nginx/sites-enabled/default
+
+service nginx restart
